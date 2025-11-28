@@ -22,9 +22,10 @@ For the notify-send variant, the notification is sent as critical, meaning it pe
 
 ## **Download**
 
-You can click the "zip" button (box icon) in the corner to download the contents of this folder as a zip file.
+If you're viewing this from my file server, you can click the "zip" button (box icon) in the bottom right corner to download the contents of this folder as a zip file.
+Otherwise you can `git clone` the GitHub repository or click the "Code" button on the GitHub webpage and "Download ZIP".
 
-You can also paste the below command into a terminal to download the contents of this folder:
+You can also paste the below command into a terminal to download the contents of this repository:
 
 ```sh
 curl https://files.littlebitstudios.com/share/ostree-update-notify?tar | tar -x
@@ -34,7 +35,7 @@ Explanation: curl downloads from the website, the ?tar after the URL specifies t
 
 ## **Installation**
 
-From within the extracted ostree-update-notify folder, run `chmod \+x \*.sh` to make the scripts executable.
+From within the ostree-update-notify folder, run `chmod \+x \*.sh` to make the scripts executable.
 
 Then, run `./setup.sh` to perform an automatic setup, which installs the files and enables the systemd user timer.
 
