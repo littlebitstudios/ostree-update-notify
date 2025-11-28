@@ -4,7 +4,7 @@ A set of scripts that provide automatic notifications for pending system updates
 
 This is only tested on Universal Blue's distros ([Bazzite](https://bazzite.gg), [Bluefin](https://projectbluefin.io), [Aurora](https://getaurora.dev)), which have automatic updates enabled by default. I specifically tested on Bazzite (KDE) and Aurora, but since ostree is shared with all Fedora Atomic distros, this should work with any such distro that automatically downloads new updates.
 
-This project is replicated on my home server at https://files.littlebitstudios.com/share/ostree-update-notify and on GitHub at https://github.com/littlebitstudios/ostree-update-notify. All downloads used in the script come from my home server.
+This project is replicated on my home server at https://files.littlebitstudios.com/share/ostree-update-notify and on GitHub at https://github.com/littlebitstudios/ostree-update-notify.
 
 ## Quick Setup
 
@@ -15,6 +15,11 @@ If you want to add custom behavior to the script, then continue to the Download 
 eval $(curl https://files.littlebitstudios.com/share/ostree-update-notify/quick-setup.sh)
 ```
 
+You can also use this line instead to quick setup from GitHub (requires Git):
+```sh
+git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./setup.sh && cd .. && rm -rf ostree-update-notify
+```
+
 ## **Behavior**
 
 If an update is available (ostree deployment staged) then a push notification (using notify-send) or dialog (using kdialog or zenity) will fire telling the user to reboot the system. The dialog variants will allow the user to reboot the system immediately by pressing "Yes".\
@@ -22,16 +27,18 @@ For the notify-send variant, the notification is sent as critical, meaning it pe
 
 ## **Download**
 
-If you're viewing this from my file server, you can click the "zip" button (box icon) in the bottom right corner to download the contents of this folder as a zip file.
-Otherwise you can `git clone` the GitHub repository or click the "Code" button on the GitHub webpage and "Download ZIP".
+If you're viewing this from my file server, you can click the "zip" button (box icon) in the bottom right corner to download the contents of this folder as a zip file. \
+If viewing from GitHub you can click the "Code" button on the webpage and "Download ZIP".
 
 You can also paste the below command into a terminal to download the contents of this repository:
-
 ```sh
 curl https://files.littlebitstudios.com/share/ostree-update-notify?tar | tar -x
 ```
 
-Explanation: curl downloads from the website, the ?tar after the URL specifies to download as a .tar archive, and tar \-x after the vertical bar immediately extracts the archive.
+Or use `git clone` if you have Git:
+```sh
+git clone https://github.com/littlebitstudios/ostree-update-notify
+```
 
 ## **Installation**
 
@@ -42,14 +49,19 @@ Then, run `./setup.sh` to perform an automatic setup, which installs the files a
 ### **Custom Functionality**
 There are multiple variants of the script; you can edit the variant you plan to use for custom functionality. The script explains the different notification modes, but the `kdialog` variant is recommended for KDE-based systems and the `zenity` variant is recommended for GNOME-based systems (with the `notify-send` variant being the fallback if you don't know what your environment is).
 
-An example of custom functionality would be to add a `curl` statement to trigger a remote notification with webhooks or [ntfy](https://ntfy.sh) (an open-source push notification server).
+An example of custom functionality would be to add a `curl` command to trigger a remote notification with webhooks or [ntfy](https://ntfy.sh) (an open-source push notification server).
 ## **Uninstall**
-If you want to remove the scripts later, run ./remove.sh. If you used the quick setup at the beginning of the readme or removed files manually after installation, you can use the statement below to uninstall.
+If you want to remove the scripts later, run ./remove.sh. If you used the quick setup at the beginning of the readme or removed files manually after installation, you can use one of the commands below to uninstall.
 
 ### Quick Uninstall
 Copy this into a terminal:
 ```sh
 eval $(curl https://files.littlebitstudios.com/share/ostree-update-notify/quick-remove.sh)
+```
+
+You can also use this line instead to quick remove from GitHub (requires Git):
+```sh
+git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./remove.sh && cd .. && rm -rf ostree-update-notify
 ```
 
 ## License
