@@ -1,0 +1,9 @@
+[Unit]
+Description=Run rpm-ostree Staged Deployment Check
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
