@@ -6,6 +6,16 @@ This is only tested on Universal Blue's distros ([Bazzite](https://bazzite.gg), 
 
 This project is replicated on my home server at https://files.littlebitstudios.com/share/ostree-update-notify and on GitHub at https://github.com/littlebitstudios/ostree-update-notify.
 
+## Demo Images
+
+`kdialog` variant running on Aurora:\
+![ostnotify kdialog demo](https://files.littlebitstudios.com/public/ostnotify-demo-kdialog.png)
+
+`zenity` variant running on Bluefin:\
+![ostnotify zenity demo](https://files.littlebitstudios.com/public/ostnotify-demo-zenity.png)
+
+*`notify-send` is not shown here because its appearance varies with different desktop environments.*
+
 ## Quick Setup
 
 Copy this one-liner into a terminal and the script will download itself, show the setup prompts, and clean up the setup files.\
