@@ -8,10 +8,12 @@ This project is replicated on my home server at https://files.littlebitstudios.c
 
 ## Demo Images
 
-`kdialog` variant running on Aurora:\
+`kdialog` variant running on Aurora:
+
 ![ostnotify kdialog demo](https://files.littlebitstudios.com/public/ostnotify-demo-kdialog.png)
 
-`zenity` variant running on Bluefin:\
+`zenity` variant running on Bluefin:
+
 ![ostnotify zenity demo](https://files.littlebitstudios.com/public/ostnotify-demo-zenity.png)
 
 *`notify-send` is not shown here because its appearance varies with different desktop environments.*
