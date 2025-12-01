@@ -10,11 +10,11 @@ This project is replicated on my home server at https://files.littlebitstudios.c
 
 `kdialog` variant running on Aurora:
 
-![ostnotify kdialog demo](https://files.littlebitstudios.com/public/ostnotify-demo-kdialog.png)
+<img src="https://files.littlebitstudios.com/public/ostnotify-demo-kdialog.png" max-width=100% alt="ostnotify kdialog demo">
 
 `zenity` variant running on Bluefin:
 
-![ostnotify zenity demo](https://files.littlebitstudios.com/public/ostnotify-demo-zenity.png)
+<img src="https://files.littlebitstudios.com/public/ostnotify-demo-zenity.png" max-width=100% alt="ostnotify zenity demo">
 
 *`notify-send` is not shown here because its appearance varies with different desktop environments.*
 
