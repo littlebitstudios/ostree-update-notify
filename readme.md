@@ -1,4 +1,4 @@
-# **OSTree Update Notifier**
+# OSTree Update Notifier
 
 A set of scripts that provide automatic notifications for pending system updates on Fedora Atomic (and derivative) systems.
 
@@ -32,12 +32,12 @@ You can also use this line instead to quick setup from GitHub (requires Git):
 git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./setup.sh && cd .. && rm -rf ostree-update-notify
 ```
 
-## **Behavior**
+## Behavior
 
 If an update is available (ostree deployment staged) then a push notification (using notify-send) or dialog (using kdialog or zenity) will fire telling the user to reboot the system. The dialog variants will allow the user to reboot the system immediately by pressing "Yes".\
 For the notify-send variant, the notification is sent as critical, meaning it persists on the screen until dismissed (and on KDE the notification appears with an orange bar next to it).
 
-## **Download**
+## Download
 
 If you're viewing this from my file server, you can click the "zip" button (box icon) in the bottom right corner to download the contents of this folder as a zip file. \
 If viewing from GitHub you can click the "Code" button on the webpage and "Download ZIP".
@@ -52,17 +52,18 @@ Or use `git clone` if you have Git:
 git clone https://github.com/littlebitstudios/ostree-update-notify
 ```
 
-## **Installation**
+## Installation
 
 From within the ostree-update-notify folder, run `chmod \+x \*.sh` to make the scripts executable.
 
 Then, run `./setup.sh` to perform an automatic setup, which installs the files and enables the systemd user timer.
 
-### **Custom Functionality**
+### Custom Functionality
 There are multiple variants of the script; you can edit the variant you plan to use for custom functionality. The script explains the different notification modes, but the `kdialog` variant is recommended for KDE-based systems and the `zenity` variant is recommended for GNOME-based systems (with the `notify-send` variant being the fallback if you don't know what your environment is).
 
 An example of custom functionality would be to add a `curl` command to trigger a remote notification with webhooks or [ntfy](https://ntfy.sh) (an open-source push notification server).
-## **Uninstall**
+
+## Uninstall
 If you want to remove the scripts later, run ./remove.sh. If you used the quick setup at the beginning of the readme or removed files manually after installation, you can use one of the commands below to uninstall.
 
 ### Quick Uninstall
