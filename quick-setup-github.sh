@@ -1,0 +1,1 @@
+git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./setup.sh && cd .. && rm -rf ostree-update-notify

@@ -1,0 +1,1 @@
+mkdir ostree-update-notify && cd ostree-update-notify && curl https://tangled.org/littlebitstudios.com/ostree-update-notify/archive/main | tar -xz && chmod +x *.sh && ./remove.sh && cd .. && rm -rf ostree-update-notify
