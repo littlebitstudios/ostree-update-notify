@@ -1,1 +1,0 @@
-curl https://files.littlebitstudios.com/share/ostree-update-notify?tar | tar -x && cd ostree-update-notify && chmod +x *.sh && ./remove.sh && cd .. && rm -r ostree-update-notify
