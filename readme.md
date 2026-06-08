@@ -4,7 +4,7 @@ A set of scripts that provide automatic notifications for pending system updates
 
 This is only tested on Universal Blue's distros ([Bazzite](https://bazzite.gg), [Bluefin](https://projectbluefin.io), [Aurora](https://getaurora.dev)), which have automatic updates enabled by default. I specifically tested on Bazzite (KDE) and Aurora, but since ostree is shared with all Fedora Atomic distros, this should work with any such distro that automatically downloads new updates.
 
-This project is replicated on my home server at https://files.littlebitstudios.com/share/ostree-update-notify and on GitHub at https://github.com/littlebitstudios/ostree-update-notify.
+This project is replicated on GitHub ([littlebitstudios/ostree-update-notify](https://github.com/littlebitstudios/ostree-update-notify)), Tangled ([littlebitstudios.com/ostree-update-notify](https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk)), and [Iris Git](https://git.iris.to/#/npub1pra8zgw2hrckthu0xexs5k7xvz5mt6rsfk09e9egehnj7q8mpp9s8vr6v5/ostree-update-notify).
 
 ## Demo Images
 
@@ -20,16 +20,17 @@ This project is replicated on my home server at https://files.littlebitstudios.c
 
 ## Quick Setup
 
-Copy this one-liner into a terminal and the script will download itself, show the setup prompts, and clean up the setup files.\
+Copy one of these one-liners into a terminal and the script will download itself, show the setup prompts, and clean up the setup files.\
 If you want to add custom behavior to the script, then continue to the Download and Installation sections.
 
+Quick setup from GitHub (requires Git):
 ```sh
-eval $(curl https://files.littlebitstudios.com/share/ostree-update-notify/quick-setup.sh)
+eval $(curl https://raw.githubusercontent.com/littlebitstudios/ostree-update-notify/refs/heads/main/quick-setup-github.sh)
 ```
 
-You can also use this line instead to quick setup from GitHub (requires Git):
+Quick setup from Tangled:
 ```sh
-git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./setup.sh && cd .. && rm -rf ostree-update-notify
+eval $(curl https://tangled.org/littlebitstudios.com/ostree-update-notify/raw/main/quick-setup-tangled.sh)
 ```
 
 ## Behavior
@@ -40,16 +41,16 @@ For the notify-send variant, the notification is sent as critical, meaning it pe
 ## Download
 
 If you're viewing this from my file server, you can click the "zip" button (box icon) in the bottom right corner to download the contents of this folder as a zip file. \
-If viewing from GitHub you can click the "Code" button on the webpage and "Download ZIP".
-
-You can also paste the below command into a terminal to download the contents of this repository:
-```sh
-curl https://files.littlebitstudios.com/share/ostree-update-notify?tar | tar -x
-```
+If viewing from GitHub you can click the "Code" button on the webpage and "Download ZIP". You can also download a zip file from Iris Git.
 
 Or use `git clone` if you have Git:
 ```sh
 git clone https://github.com/littlebitstudios/ostree-update-notify
+```
+
+Or `git clone` from Tangled:
+```sh
+git clone https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk
 ```
 
 ## Installation
@@ -67,14 +68,14 @@ An example of custom functionality would be to add a `curl` command to trigger a
 If you want to remove the scripts later, run ./remove.sh. If you used the quick setup at the beginning of the readme or removed files manually after installation, you can use one of the commands below to uninstall.
 
 ### Quick Uninstall
-Copy this into a terminal:
+Quick remove from GitHub (requires Git):
 ```sh
-eval $(curl https://files.littlebitstudios.com/share/ostree-update-notify/quick-remove.sh)
+eval $(curl https://raw.githubusercontent.com/littlebitstudios/ostree-update-notify/refs/heads/main/quick-remove-github.sh)
 ```
 
-You can also use this line instead to quick remove from GitHub (requires Git):
+Quick remove from Tangled:
 ```sh
-git clone https://github.com/littlebitstudios/ostree-update-notify && cd ostree-update-notify && chmod +x *.sh && ./remove.sh && cd .. && rm -rf ostree-update-notify
+eval $(curl https://tangled.org/littlebitstudios.com/ostree-update-notify/raw/main/quick-remove-tangled.sh)
 ```
 
 ## License
