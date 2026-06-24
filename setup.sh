@@ -83,7 +83,7 @@ cp ./ostree-update-notify.timer $HOME/.config/systemd/user/
 # Copy the executable script (ensuring we set the executable bit)
 echo "Copying script and setting permissions..."
 cp "./ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh" $HOME/.userscripts/
-chmod +x "$HOME/userscripts/ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh"
+chmod +x "$HOME/.userscripts/ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh"
 
 # Rename the copied script to the common name
 echo "Renaming script to ostree-update-notify.sh..."
