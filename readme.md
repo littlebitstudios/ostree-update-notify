@@ -25,12 +25,12 @@ If you want to add custom behavior to the script, then continue to the Download 
 
 Quick setup from GitHub (requires Git):
 ```sh
-eval $(curl https://raw.githubusercontent.com/littlebitstudios/ostree-update-notify/refs/heads/main/quick-setup-github.sh)
+eval $(curl -fsSL https://raw.githubusercontent.com/littlebitstudios/ostree-update-notify/refs/heads/main/quick-setup-github.sh)
 ```
 
 Quick setup from Tangled:
 ```sh
-eval $(curl https://tangled.org/littlebitstudios.com/ostree-update-notify/raw/main/quick-setup-tangled.sh)
+eval $(curl -fsSL https://tangled.org/littlebitstudios.com/ostree-update-notify/raw/main/quick-setup-tangled.sh)
 ```
 
 ## Behavior
