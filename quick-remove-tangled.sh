@@ -1,1 +1,1 @@
-curl https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk/archive/main | tar -xz && cd ostree-update-notify-main && chmod +x *.sh && ./remove.sh && cd .. && rm -rf ostree-update-notify-main
+curl -fSL https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk/archive/main | tar -xz && cd ostree-update-notify-main && chmod +x *.sh && ./remove.sh && cd .. && rm -rf ostree-update-notify-main
