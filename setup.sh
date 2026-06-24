@@ -7,9 +7,9 @@ set -euo pipefail
 echo ""
 echo "--- OSTree Update Notifier Setup ---"
 echo "This script will perform the following actions:"
-echo "- Create necessary directories: $HOME/.config/systemd/user and $HOME/userscripts"
+echo "- Create necessary directories: $HOME/.config/systemd/user and $HOME/.userscripts"
 echo "- Copy unit files to: $HOME/.config/systemd/user"
-echo "- Copy script file to: $HOME/userscripts"
+echo "- Copy script file to: $HOME/.userscripts"
 echo "- Reload the user systemd manager"
 echo "- Enable and start the update check timer"
 echo "--------------------------------------"
@@ -72,8 +72,8 @@ echo "Creating directory: $HOME/.config/systemd/user"
 mkdir -p $HOME/.config/systemd/user
 
 # Create the user scripts directory
-echo "Creating directory: $HOME/userscripts"
-mkdir -p $HOME/userscripts
+echo "Creating directory: $HOME/.userscripts"
+mkdir -p $HOME/.userscripts
 
 # Copy the unit files (using $HOME for path expansion)
 echo "Copying unit and timer files..."
@@ -82,12 +82,12 @@ cp ./ostree-update-notify.timer $HOME/.config/systemd/user/
 
 # Copy the executable script (ensuring we set the executable bit)
 echo "Copying script and setting permissions..."
-cp "./ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh" $HOME/userscripts/
+cp "./ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh" $HOME/.userscripts/
 chmod +x "$HOME/userscripts/ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh"
 
 # Rename the copied script to the common name
 echo "Renaming script to ostree-update-notify.sh..."
-mv "$HOME/userscripts/ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh" $HOME/userscripts/ostree-update-notify.sh
+mv "$HOME/.userscripts/ostree-update-notify_$SCRIPT_VARIANT_LOWER.sh" $HOME/.userscripts/ostree-update-notify.sh
 
 # --- 3. Systemd Activation ---
 

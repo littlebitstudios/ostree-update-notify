@@ -3,7 +3,7 @@
 set -euo pipefail
 
 SERVICE_NAME="ostree-update-notify"
-USER_SCRIPT_PATH="$HOME/userscripts/${SERVICE_NAME}.sh"
+USER_SCRIPT_PATH="$HOME/.userscripts/${SERVICE_NAME}.sh"
 USER_SERVICE_PATH="$HOME/.config/systemd/user/${SERVICE_NAME}.service"
 USER_TIMER_PATH="$HOME/.config/systemd/user/${SERVICE_NAME}.timer"
 
