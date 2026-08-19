@@ -4,7 +4,7 @@ A set of scripts that provide automatic notifications for pending system updates
 
 This is only tested on Universal Blue's distros ([Bazzite](https://bazzite.gg), [Bluefin](https://projectbluefin.io), [Aurora](https://getaurora.dev)), which have automatic updates enabled by default. I specifically tested on Bazzite (KDE) and Aurora, but since ostree is shared with all Fedora Atomic distros, this should work with any such distro that automatically downloads new updates.
 
-This project is replicated on GitHub ([littlebitstudios/ostree-update-notify](https://github.com/littlebitstudios/ostree-update-notify)), Tangled ([littlebitstudios.com/ostree-update-notify](https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk)), [Iris Git](https://git.iris.to/#/npub1pra8zgw2hrckthu0xexs5k7xvz5mt6rsfk09e9egehnj7q8mpp9s8vr6v5/ostree-update-notify), and gitworkshop/ngit ([littlebitstudios.com/ostree-update-notify](https://gitworkshop.dev/littlebitstudios.com/ostree-update-notify)).
+This project is replicated on [GitHub](https://github.com/littlebitstudios/ostree-update-notify), [Tangled](https://tangled.org/did:plc:pnudcbzg2wt4cxr7tyjtw6mk), [Iris Git](https://git.iris.to/#/npub1pra8zgw2hrckthu0xexs5k7xvz5mt6rsfk09e9egehnj7q8mpp9s8vr6v5/ostree-update-notify), [GitWorkshop]([littlebitstudios.com/ostree-update-notify](https://gitworkshop.dev/littlebitstudios.com/ostree-update-notify)), and [Radicle](https://radicle.network/nodes/rad.littlebitstudios.com/rad%3Az3cg4jxuWNVPCmMHBdbFVpSZsbgB).
 
 ## Demo Images
 
